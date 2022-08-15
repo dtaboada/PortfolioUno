@@ -80,7 +80,7 @@
           </ul>
           <ul class="nav ml-auto">
             <li class="nav-item">
-              <button class="btn btn-fab btn-theme no-shadow">En</button>
+              <button class="btn btn-fab btn-theme no-shadow">Sp</button>
             </li>
           </ul>
         </div>
@@ -90,8 +90,9 @@
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">Hola</h5>
-      <h1 class="fw-light mb-4">Soy <b class="fg-theme">Diego</b> Taboada</h1>
-      <div class="badge">Analista de Sistemas & Full Stack Developer</div>
+      <h1 class="fw-light mb-4">Soy <b class="fg-theme" name="nombre"></b><span name="apellido"></h1>
+      
+      <div class="badge" name="titulo"></div>
     </div> <!-- End Caption header -->
     <div class="floating-button"><span class="ti-mouse"></span></div>
   </div>
@@ -105,15 +106,14 @@
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-          <h1 class="fw-light">Diego Taboada</h1>
-          <h5 class="fg-theme mb-3">Analista de Sistemas & Full Stack Developer</h5>
-          <p class="text-muted">Hola!!! Gracias por visitar mi portfolio. Te cuento un poco sobre mi, soy organizado, me gusta trabajar en en equipo y el buen clima interpersonal en el ambito laboral. Disfruto de transmitir mis conocimientos y experiencias para aportar al crecimiento grupal. Me gusta capacitarme para la incorporación de nuevas herramientas y los nuevos desafios
-          </p>
+          <h1 class="fw-light mb-4"> <b name="nombre"></b>, <span name="apellido"></h1>
+          <h5 class="fg-theme mb-3" name="titulo"></h5>
+          <p class="text-muted" name="acercade"></p>
           <ul class="theme-list">
-            <li><b>Direccion:</b> Calle 15 nro. 311, Berisso</li>
-            <li><b>Provincia:</b> Buenos Aires</li>
-            <li><b>Edad:</b> 37</li>
-            <li><b>Celular:</b> 011-5980-3008</li>
+            <li><b>Direccion:</b> <span name="direccion"></li>
+            <li><b>Provincia:</b> <span name="provincia"></li>
+            <li><b>Edad:</b> <span name="edad"></li>
+            <li><b>Celular:</b> <span name="telefono"></li>
           </ul>
           <button class="btn btn-theme-outline">Download CV</button>
         </div>
@@ -548,5 +548,7 @@
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
   
+  <script src="../assets/js/Persona.js"></script>
+
 </body>
 </html>
