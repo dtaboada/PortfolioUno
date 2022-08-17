@@ -9,35 +9,41 @@ var portfolio = {
     telefono: "11-5980-3008",
     acercade: "Hola!!! Gracias por visitar mi portfolio. Te cuento un poco sobre mi, soy organizado, me gusta trabajar en en equipo y el buen clima interpersonal en el ambito laboral. Disfruto de transmitir mis conocimientos y experiencias para aportar al crecimiento grupal. Me gusta capacitarme para la incorporación de nuevas herramientas y los nuevos desafios"
 };
-function SetNombre() {
+var contacto = {
+    linkedin: "https://www.linkedin.com/in/diego-leandro-taboada",
+    github: "https://github.com/dtaboada",
+    web: "https://www.frlp.utn.edu.ar/",
+    youtube: ""
+};
+function setNombre() {
     var demoClasses = document.getElementsByName("nombre");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
         element.innerHTML = portfolio.nombre;
     });
 }
-function SetApellido() {
+function setApellido() {
     var demoClasses = document.getElementsByName("apellido");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
         element.innerHTML = portfolio.apellido;
     });
 }
-function SetDireccion() {
+function setDireccion() {
     var demoClasses = document.getElementsByName("direccion");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
         element.innerHTML = portfolio.direccion;
     });
 }
-function SetProvincia() {
+function setProvincia() {
     var demoClasses = document.getElementsByName("provincia");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
         element.innerHTML = portfolio.provincia;
     });
 }
-function SetTitulo() {
+function setTitulo() {
     var demoClasses = document.getElementsByName("titulo");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
@@ -52,14 +58,14 @@ function SetTitulo() {
     });
 }
  */
-function SetAcercaDe() {
+function setAcercaDe() {
     var demoClasses = document.getElementsByName("acercade");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
         element.innerHTML = portfolio.acercade;
     });
 }
-function SetTelefono() {
+function setTelefono() {
     var demoClasses = document.getElementsByName("telefono");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(function (element) {
@@ -80,13 +86,17 @@ function calcularEdad() {
     demoClasses.forEach(function (element) {
         element.innerHTML = edadstr;
     });
-    alert(edadstr);
 }
-SetNombre();
-SetApellido();
-SetDireccion();
-SetProvincia();
-SetTitulo();
-SetTelefono();
-SetAcercaDe();
+function setEnlacesContacto() {
+    var link = document.getElementById("linkedin");
+    link === null || link === void 0 ? void 0 : link.setAttribute("href", contacto.linkedin);
+}
+setNombre();
+setApellido();
+setDireccion();
+setProvincia();
+setTitulo();
+setTelefono();
+setAcercaDe();
 calcularEdad();
+setEnlacesContacto();

@@ -10,6 +10,13 @@ interface Persona {
     acercade: string;  
 }
 
+interface Redes {
+    linkedin: string;
+    github: string;
+    web: string;
+    youtube: string;      
+}
+
 
 let portfolio:Persona={
     nombre:"Diego",
@@ -23,9 +30,16 @@ let portfolio:Persona={
     acercade: "Hola!!! Gracias por visitar mi portfolio. Te cuento un poco sobre mi, soy organizado, me gusta trabajar en en equipo y el buen clima interpersonal en el ambito laboral. Disfruto de transmitir mis conocimientos y experiencias para aportar al crecimiento grupal. Me gusta capacitarme para la incorporación de nuevas herramientas y los nuevos desafios",  
 }
 
+let contacto: Redes = {
+    linkedin: "https://www.linkedin.com/in/diego-leandro-taboada",
+    github: "https://github.com/dtaboada",
+    web: "https://www.frlp.utn.edu.ar/",
+    youtube: "",   
+}
 
 
-function SetNombre( ):void{
+
+function setNombre( ):void{
       const demoClasses = document.getElementsByName("nombre");
      // Change the text of multiple elements with a loop
      demoClasses.forEach(element => {
@@ -33,7 +47,7 @@ function SetNombre( ):void{
 });
 }
 
-function SetApellido( ):void{
+function setApellido( ):void{
     const demoClasses = document.getElementsByName("apellido");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -41,7 +55,7 @@ function SetApellido( ):void{
     });
 }
 
-function SetDireccion():void{
+function setDireccion():void{
     const demoClasses = document.getElementsByName("direccion");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -49,7 +63,7 @@ function SetDireccion():void{
     });
 }
 
-function SetProvincia():void{
+function setProvincia():void{
     const demoClasses = document.getElementsByName("provincia");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -57,7 +71,7 @@ function SetProvincia():void{
     });
 }
 
-function SetTitulo():void{
+function setTitulo():void{
     const demoClasses = document.getElementsByName("titulo");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -74,7 +88,7 @@ function SetTitulo():void{
 }
  */
 
-function SetAcercaDe():void{
+function setAcercaDe():void{
     const demoClasses = document.getElementsByName("acercade");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -82,7 +96,7 @@ function SetAcercaDe():void{
     });
 }
 
-function SetTelefono():void{
+function setTelefono():void{
     const demoClasses = document.getElementsByName("telefono");
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
@@ -106,17 +120,23 @@ function calcularEdad():void {
     // Change the text of multiple elements with a loop
     demoClasses.forEach(element => {
     element.innerHTML = edadstr;
-    });
-      
-    alert(edadstr);
+    });     
 }
 
+function setEnlacesContacto(){
+        var link = document.getElementById("linkedin");
+        link?.setAttribute("href",contacto.linkedin);  
+    }
+     
+     
 
-SetNombre();
-SetApellido();
-SetDireccion();
-SetProvincia();
-SetTitulo();
-SetTelefono();
-SetAcercaDe();
+
+setNombre();
+setApellido();
+setDireccion();
+setProvincia();
+setTitulo();
+setTelefono();
+setAcercaDe();
 calcularEdad();
+setEnlacesContacto();
